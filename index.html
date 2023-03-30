@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Etch-a-Sketch</title>
+</head>
+<body>
+    <main>
+        <h1>Etch-a-Sketch</h1>
+        <div class="container">
+            <div class="option_panel">
+                <div class="pen_color">
+                    <input class="pen_picker" type="color"/>
+                   <span>Pen Color</span>
+                </div>
+                <div class="background_color">
+                    <input class="background_picker" value="#ffffff" type="color"/>
+                    <span>Background Color</span>
+                </div>
+                <div class="Color_fill">Color Fill</div>
+                <div class="Color_grabber">Color Grabber</div>
+                <div class="toggle_eraser">Toggle Eraser</div>
+                <div class="toggle_Rainbow">Toggle Rainbow</div>
+                <input class="slider" type="range" id="range" min="1" max="60" />
+                <p>Grid size: <span>32 x 32</span></p>
+                <div class="taggle_grid_lines">Toggle Grid Lines</div>
+                <div class="clear">Clear</div>
+            </div>
+            <div class="grid_wrraper">
+                <div class="grid"></div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
