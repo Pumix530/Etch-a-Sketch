@@ -13,7 +13,7 @@
         <div class="container">
             <div class="option_panel">
                 <div class="pen_color">
-                    <input class="pen_picker" type="color"/>
+                    <input class="pen_picker" value="#000000" type="color"/>
                    <span>Pen Color</span>
                 </div>
                 <div class="background_color">
@@ -24,15 +24,16 @@
                 <div class="Color_grabber">Color Grabber</div>
                 <div class="toggle_eraser">Toggle Eraser</div>
                 <div class="toggle_Rainbow">Toggle Rainbow</div>
-                <input class="slider" type="range" id="range" min="1" max="60" />
-                <p>Grid size: <span>32 x 32</span></p>
+                <input class="slider" id="rangeInput" type="range" min="1" max="60" value="26" onchange="changeSize(this.value)"/>
+                <p>Grid size: <span class="slider_value">32</span> x <span class="slider_value2">32</span></p>
                 <div class="taggle_grid_lines">Toggle Grid Lines</div>
                 <div class="clear">Clear</div>
             </div>
             <div class="grid_wrraper">
-                <div class="grid"></div>
+                <div class="grid" id="grid"></div>
             </div>
         </div>
     </main>
+    <script src="app.js"></script>
 </body>
 </html>

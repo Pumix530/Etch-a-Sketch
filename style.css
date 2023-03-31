@@ -19,7 +19,7 @@ main{
   align-items: center;
 }
 h1{
-  font-size: 4rem;
+  font-size: 3rem;
   margin-top: 4rem;
   margin-bottom: 4rem;
   color: var(--color--orange);
@@ -40,29 +40,31 @@ h1{
   align-items: center;
   color: var(--color--orange);
   background-color: var(--color--black2);
-  font-size: 1.2rem;
+  font-size: 1rem;
   border-radius: 20px;
+  margin-bottom: 5rem;
+  padding-bottom: 0.7rem;
 }
 .pen_color,.background_color{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 3rem;
-  margin-right: 3rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
   margin-top: 2rem;
 }
 .background_color{
   margin-bottom: 2rem;
 }
 .pen_picker,.background_picker{
-  width: 8rem;
-  height: 3rem;
+  width: 5rem;
+  height: 2rem;
   margin-right: 1rem;
   border:1px solid var(--color--orange);
   cursor: pointer;
 }
 .pen_color{
-  transform: translateX(-33px);
+  transform: translateX(-30px);
 }
 
 .option_panel > div:nth-child(3),
@@ -73,7 +75,7 @@ h1{
 .option_panel > div:nth-child(10){
   border: solid 1px var(--color--orange);
   width: 75%;
-  height: 3rem;
+  height: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -111,7 +113,7 @@ h1{
   opacity: 0.7;
   -webkit-transition: .2s;
   transition: opacity .2s;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .slider:hover {
@@ -135,19 +137,28 @@ h1{
   cursor: pointer;
   border-radius: 50%
 }
+/* Option Panel End*/
 
+/* Grid */
 .grid_wrraper{
-  width: 50rem;
+  width: 45rem;
   background-color: var(--color--black2);
-  height: 50rem;
-  margin-left: 10rem;
+  height: 45rem;
+  margin-left: 7rem;
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 5rem;
 }
 .grid{
-  width: 45rem;
-  height: 45rem;
+  width: 40rem;
+  height: 40rem;
   background-color: white;
+  border: 1px solid gray;
+  display: grid;
+}
+
+.grid > div {
+  border: solid 1px gray;
 }
