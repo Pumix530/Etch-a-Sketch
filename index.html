@@ -32,23 +32,7 @@
             </div>
         </div>
     </main>
-    <script src="app2.js"></script>
+    <script src="app.js"></script>
 </body>
-</html>slider.addEventListener('mousemove', function(e) {
-    e.stopPropagation();
-  });
-  
-  slider.addEventListener('click', function() {
-    slider_value.textContent = slider.value + " x " + slider.value ;
-    changeSize(this.value)
-    console.log(slider.value)
-  });
-  
-  slider.addEventListener('mouseout', function() {
-    slider.style.pointerEvents = 'auto';
-  });
-  
-  // Prevents range input from resetting on hover
-  slider.addEventListener('mouseover', function() {
-    slider.style.pointerEvents = 'none';
+</html>
   });

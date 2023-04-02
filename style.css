@@ -69,10 +69,9 @@ h1{
 
 .option_panel > div:nth-child(3),
 .option_panel > div:nth-child(4),
+
 .option_panel > div:nth-child(5),
-.option_panel > div:nth-child(6),
-.option_panel > div:nth-child(9),
-.option_panel > div:nth-child(10){
+.option_panel > div:nth-child(8){
   border: solid 1px var(--color--orange);
   width: 75%;
   height: 2.5rem;
@@ -87,21 +86,17 @@ h1{
 .option_panel > div:nth-child(3):hover,
 .option_panel > div:nth-child(4):hover,
 .option_panel > div:nth-child(5):hover,
-.option_panel > div:nth-child(6):hover,
-.option_panel > div:nth-child(9):hover,
-.option_panel > div:nth-child(10):hover{
+.option_panel > div:nth-child(8):hover{
   background-color: var(--color--orange);
   color: var(--color--black2);
 }
 
-.option_panel > div:nth-child(4),
-.option_panel > div:nth-child(6){
-  margin-bottom: 3rem;
+.option_panel > div:nth-child(5){
+  margin-bottom: 2rem;
 }
-
-.option_panel > div:nth-child(9){
-  margin-bottom: 3rem;
-  margin-top: 3rem;
+.option_panel > div:nth-child(8){
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .slider {
@@ -123,16 +118,16 @@ h1{
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   background: var(--color--orange);
   cursor: pointer;
   border-radius: 50%;
 }
 
 .slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   background: var(--color--orange);
   cursor: pointer;
   border-radius: 50%
