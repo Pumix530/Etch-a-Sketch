@@ -20,13 +20,11 @@
                     <input class="background_picker" value="#ffffff" type="color"/>
                     <span>Background Color</span>
                 </div>
-                <div class="Color_fill">Color Fill</div>
-                <div class="Color_grabber">Color Grabber</div>
-                <div class="toggle_eraser">Toggle Eraser</div>
-                <div class="toggle_Rainbow">Toggle Rainbow</div>
-                <input class="slider" id="rangeInput" type="range" min="1" max="60" value="16" onchange="changeSize(this.value)"/>
-                <p>Grid size: <span class="slider_value">16</span> x <span class="slider_value2">16</span></p>
-                <div class="taggle_grid_lines">Toggle Grid Lines</div>
+                <div class="toggle_eraser">Eraser</div>
+                <div class="toggle_Rainbow">Rainbow</div>
+                <div class="taggle_grid_lines">Grid Lines</div>
+                <input class="slider" id="rangeInput" type="range" min="1" max="60" value="16"/>
+                <p>Grid size: <span class="slider_value">16</span></p>
                 <div class="clear">Clear</div>
             </div>
             <div class="grid_wrraper">
@@ -34,6 +32,23 @@
             </div>
         </div>
     </main>
-    <script src="app.js"></script>
+    <script src="app2.js"></script>
 </body>
-</html>
+</html>slider.addEventListener('mousemove', function(e) {
+    e.stopPropagation();
+  });
+  
+  slider.addEventListener('click', function() {
+    slider_value.textContent = slider.value + " x " + slider.value ;
+    changeSize(this.value)
+    console.log(slider.value)
+  });
+  
+  slider.addEventListener('mouseout', function() {
+    slider.style.pointerEvents = 'auto';
+  });
+  
+  // Prevents range input from resetting on hover
+  slider.addEventListener('mouseover', function() {
+    slider.style.pointerEvents = 'none';
+  });
