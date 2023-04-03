@@ -67,7 +67,6 @@ const debouncedChangeSize = debounce(changeSize, DEBOUNCE_DELAY);
 slider.addEventListener('input', function() {
   slider_value.textContent = slider.value + " x " + slider.value ;
   debouncedChangeSize();
-  console.log(slider.value);
 });
 
 // Grid
