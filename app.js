@@ -45,13 +45,30 @@ grid.addEventListener('mouseup', () => {
 });
 
 // Grid size slider text change
+function debounce(func, delay) {
+  let timerId;
+  return function (...args) {
+    if (timerId) {
+      clearTimeout(timerId);
+    }
+    timerId = setTimeout(() => {
+      func.apply(this, args);
+      timerId = null;
+    }, delay);
+  };
+}
+
+
+
+const DEBOUNCE_DELAY = 300;
+
+const debouncedChangeSize = debounce(changeSize, DEBOUNCE_DELAY);
 
 slider.addEventListener('input', function() {
   slider_value.textContent = slider.value + " x " + slider.value ;
-  changeSize(this.value)
-  console.log(slider.value)
+  debouncedChangeSize();
+  console.log(slider.value);
 });
-
 
 // Grid
 function gridSize(size){
