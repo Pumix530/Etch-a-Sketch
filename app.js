@@ -6,7 +6,7 @@ let penColor = document.querySelector(".pen_picker");
 let erase = document.querySelector('.toggle_eraser');
 let rainbow = document.querySelector(".toggle_Rainbow");
 let clear = document.querySelector('.clear')
-
+let grid = document.querySelector(".grid_wrraper")
 const DEFAULT_COLOR = "#000000"
 const DEFAULT_MODE = 'color'
 const DEFAULT_BACKGROUND_COLOR = "#ffffff"
@@ -34,27 +34,19 @@ clear.onclick = () => reload()
 
 // Checks if mouse is clicked
 let mouseDown = false
-document.body.onmousedown = () => (mouseDown = true)
-document.body.onmouseup = () => (mouseDown = false)
-
-// Grid size slider text change
-slider.addEventListener('mousemove', function(e) {
-  e.stopPropagation();
+grid.addEventListener('mousedown', () => {
+  mouseDown = true;
+});
+grid.addEventListener('mouseup', () => {
+  mouseDown = false;
 });
 
-slider.addEventListener('click', function() {
+// Grid size slider text change
+
+slider.addEventListener('input', function() {
   slider_value.textContent = slider.value + " x " + slider.value ;
   changeSize(this.value)
   console.log(slider.value)
-});
-
-slider.addEventListener('mouseout', function() {
-  slider.style.pointerEvents = 'auto';
-});
-
-// Prevents range input from resetting on hover
-slider.addEventListener('mouseover', function() {
-  slider.style.pointerEvents = 'none';
 });
 
 
@@ -136,8 +128,3 @@ function activateButton(newMode) {
       erase.classList.add('active')
     }
   }
-
-  slider.addEventListener('mouseup', function(){
-    // do nothing
-});
-  
