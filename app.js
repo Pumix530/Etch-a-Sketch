@@ -157,6 +157,7 @@ function activateButton(newMode) {
     erase.style.backgroundColor = "rgb(24, 24, 24)";
     rainbow.style.color = "rgb(249, 148, 23)";
     rainbow.style.backgroundColor = "rgb(24, 24, 24)";
+    currentMode =  'color'
   }
 
   function activeBorder(){
