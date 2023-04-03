@@ -69,7 +69,6 @@ h1{
 
 .option_panel > div:nth-child(3),
 .option_panel > div:nth-child(4),
-
 .option_panel > div:nth-child(5),
 .option_panel > div:nth-child(8){
   border: solid 1px var(--color--orange);
@@ -81,22 +80,22 @@ h1{
   margin-bottom: 1.5rem;
   cursor: pointer;
   border-radius: 18px;
-}
+  background-color: var(--color--black1);
 
-.option_panel > div:nth-child(3):hover,
-.option_panel > div:nth-child(4):hover,
-.option_panel > div:nth-child(5):hover,
-.option_panel > div:nth-child(8):hover{
-  background-color: var(--color--orange);
-  color: var(--color--black2);
 }
 
 .option_panel > div:nth-child(5){
   margin-bottom: 2rem;
+  background-color: var(--color--orange);
+  color: var(--color--black1);
 }
 .option_panel > div:nth-child(8){
   margin-bottom: 2rem;
   margin-top: 2rem;
+}
+.option_panel > div:nth-child(8):hover{
+  background-color: var(--color--orange);
+  color: var(--color--black1);
 }
 
 .slider {
@@ -135,10 +134,10 @@ h1{
 /* Option Panel End*/
 
 /* Grid */
-.grid_wrraper{
-  width: 40rem;
+.grid_wrapper{
+  width: 45rem;
   background-color: var(--color--black2);
-  height: 40rem;
+  height: 45rem;
   margin-left: 7rem;
   border-radius: 20px;
   display: flex;
@@ -147,13 +146,13 @@ h1{
   margin-bottom: 5rem;
 }
 .grid{
-  width: 35rem;
-  height: 35rem;
+  width: 40rem;
+  height: 40rem;
   background-color: white;
   border: 1px solid gray;
   display: grid;
 }
 
-.grid > div {
-  border: solid 1px gray;
+.square {
+  border: 1px solid gray;
 }

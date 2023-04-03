@@ -6,7 +6,9 @@ let penColor = document.querySelector(".pen_picker");
 let erase = document.querySelector('.toggle_eraser');
 let rainbow = document.querySelector(".toggle_Rainbow");
 let clear = document.querySelector('.clear')
-let grid = document.querySelector(".grid_wrraper")
+let grid = document.querySelector(".grid_wrapper")
+let gridLines = document.querySelector(".toggle_grid_lines")
+
 const DEFAULT_COLOR = "#000000"
 const DEFAULT_MODE = 'color'
 const DEFAULT_BACKGROUND_COLOR = "#ffffff"
@@ -30,6 +32,7 @@ penColor.onclick = () => setCurrentMode('color')
 erase.onclick = () => setCurrentMode('eraser')
 rainbow.onclick = () => setCurrentMode('rainbow')
 clear.onclick = () => reload()
+gridLines.onclick = () => activeBorder()
 
 
 // Checks if mouse is clicked
@@ -120,11 +123,38 @@ function activateButton(newMode) {
       penColor.classList.add('active')
       rainbow.style.color = "rgb(249, 148, 23)";
       rainbow.style.backgroundColor = "rgb(24, 24, 24)";
+      erase.style.color = "rgb(249, 148, 23)";
+      erase.style.backgroundColor = "rgb(24, 24, 24)";
     } else if (newMode === 'eraser') {
       rainbow.style.color = "rgb(249, 148, 23)";
       rainbow.style.backgroundColor = "rgb(24, 24, 24)";
       erase.style.color = "rgb(24, 24, 24)";
       erase.style.backgroundColor = "rgb(249, 148, 23)";
       erase.classList.add('active')
+    }
+  }
+
+  function reload(){
+    gridSize(16);
+    slider_value.textContent = "16 x 16" ;
+    erase.style.color = "rgb(249, 148, 23)";
+    erase.style.backgroundColor = "rgb(24, 24, 24)";
+    rainbow.style.color = "rgb(249, 148, 23)";
+    rainbow.style.backgroundColor = "rgb(24, 24, 24)";
+  }
+
+  function activeBorder(){
+    let squares = document.querySelectorAll(".square");
+    if (gridLines.classList.contains("active")){
+      gridLines.style.color = "rgb(249, 148, 23)";
+      gridLines.style.backgroundColor = "rgb(24, 24, 24)";
+      squares.forEach(square => square.style.border = "none");
+      gridLines.classList.remove("active")
+    }
+    else{
+      gridLines.style.color = "rgb(24, 24, 24)";
+      gridLines.style.backgroundColor = "rgb(249, 148, 23)";
+      squares.forEach(square => square.style.border = "1px solid gray");
+      gridLines.classList.add("active");
     }
   }
